@@ -1,8 +1,19 @@
 # Godot 4+ specific ignores
 .godot/
-.DS_Store
+.import/
+.mono/
+data_*/
+export.cfg
+export_presets.cfg
 _dist
+downloaded-assets/
+
+.DS_Store
 *.dmg
 *.exe
+*.import
 *.pck
+*.translation
 *.zip
+mono_crash.*.json
+

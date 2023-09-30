@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://nsfa55o04lks"]
+
+[ext_resource type="Script" path="res://Loops.gd" id="1_hg8oe"]
+[ext_resource type="PackedScene" uid="uid://dvbq0uqas254x" path="res://star.tscn" id="2_57fu5"]
+
+[node name="Main" type="Node2D"]
+modulate = Color(0, 0, 0, 1)
+script = ExtResource("1_hg8oe")
+spawn_count = 225
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Star" parent="." instance=ExtResource("2_57fu5")]
+position = Vector2(-115, -78)

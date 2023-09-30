@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2371hjomnmen"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_sfk6o"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c2x0a"]
+friction = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_usqw4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_45wvk"]
+size = Vector3(1, 0.958241, 1)
+
+[node name="Player" type="RigidBody3D"]
+transform = Transform3D(0.990932, 0, 0, 0, 0.959511, 0, 0, 0, 0.990932, 0.17008, 6.03921, 13.4611)
+physics_material_override = SubResource("PhysicsMaterial_c2x0a")
+script = ExtResource("1_sfk6o")
+
+[node name="Torso" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.529618, 0, 0, 0, 0.966806, 0.0462197, 0, -0.153196, 0.291688, 0, 1.24252, -0.0131979)
+mesh = SubResource("BoxMesh_usqw4")
+
+[node name="Left Thigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.339473, 0, 0, 0, 0.025338, -0.130319, 0, 1.31482, 0.00251135, -0.3252, 0.651142, -0.116554)
+mesh = SubResource("BoxMesh_usqw4")
+
+[node name="Right Thigh" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.339473, 0, 0, 0, 0.0253383, -0.130319, 0, 1.31482, 0.00251136, 0.296376, 0.651142, -0.116554)
+mesh = SubResource("BoxMesh_usqw4")
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.408016, 0, 0, 0, 0.393621, 0, 0, 0, 0.455303, 0, 2.04271, -0.0923586)
+mesh = SubResource("BoxMesh_usqw4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.20327, 0, 0, 0, 1, 0.000444889, 1.6375, -0.215384)
+shape = SubResource("BoxShape3D_45wvk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.961264, 0.377544, 0, -0.365572, 0.930783, 0, 4.03567, 4.48327)
+fov = 57.2148
