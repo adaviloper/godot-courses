@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bomjtg62wlkat"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_5d8qi"]
+[ext_resource type="Texture2D" uid="uid://c3nvqgsbwhv3a" path="res://Sprites/Characters/character_0004.png" id="2_0xm3b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nbod5"]
+height = 24.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_rmem2"]
+font_size = 24
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_5d8qi")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_0xm3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_nbod5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreText" type="Label" parent="CanvasLayer"]
+offset_left = 93.0
+offset_top = 72.0
+offset_right = 273.0
+offset_bottom = 142.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_rmem2")
